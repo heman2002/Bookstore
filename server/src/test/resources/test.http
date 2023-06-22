@@ -1,0 +1,53 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection) or
+# paste cURL into the file and request will be converted to HTTP Request format.
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+# curl 'http://localhost:8080/HimanshuBookstoreOrder/api/orders' -X POST -H 'User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:106.0) Gecko/20100101 Firefox/106.0' -H 'Accept: */*' -H 'Accept-Language: en-US,en;q=0.5' -H 'Accept-Encoding: gzip, deflate, br' -H 'Referer: http://localhost:8081/' -H 'Content-Type: application/json' -H 'Origin: http://localhost:8081' -H 'Connection: keep-alive' -H 'Sec-Fetch-Dest: empty' -H 'Sec-Fetch-Mode: cors' -H 'Sec-Fetch-Site: same-site' --data-raw '{"cart":{"itemArray":[{"book":{"bookId":1001,"title":"How to Win Friends and Influence People","author":"Dale Carnegie","description":"","price":739,"rating":0,"isPublic":true,"isFeatured":false,"categoryId":1001},"quantity":1}]},"customerForm":{"name":"test","address":"test","phone":"2066705100","email":"test@vt.edu","ccNumber":"4444333322221111","ccExpiryMonth":11,"ccExpiryYear":2022}}'
+POST http://localhost:8080/HimanshuBookstoreOrder/api/orders
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:106.0) Gecko/20100101 Firefox/106.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "itemArray": [
+      {
+        "book": {
+          "bookId": 1001,
+          "title": "How to Win Friends and Influence People",
+          "author": "Dale Carnegie",
+          "description": "",
+          "price": 739,
+          "rating": 0,
+          "isPublic": true,
+          "isFeatured": false,
+          "categoryId": 1001
+        },
+        "quantity": 1
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "test",
+    "address": "test",
+    "phone": "2066705100",
+    "email": "test@vt.edu",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 11,
+    "ccExpiryYear": 2022
+  }
+}
+
+###
